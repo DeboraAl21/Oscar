@@ -73,22 +73,6 @@ db.oscar_indicados.distinct(
   "ano_cerimonia"
 ).length
 ```
-
-Ou:
-
-```javascript
-db.oscar_indicados.aggregate([
-{
-  $group: {
-    _id: "$ano_cerimonia"
-  }
-},
-{
-  $count: "totalCerimonias"
-}
-])
-```
-
 ---
 
 ## 1.6 Atualize os registros da coleção com os dados do Oscar 2025 e 2026
